@@ -1,0 +1,32 @@
+{
+  "accounts": [
+    {
+      "accountNumber": "045003750560013000000",
+      "name": "IYAD K QOMSYAH",
+      "balance": "1000",
+      "currancy": "USD",
+      "type": "Saving",
+      "ibanNumber": "ps98pals04500372 ",
+      "bbanNumber": "50560993000000"
+    },
+    {
+      "accountNumber": "045003750560013000000"   ,
+      "name": "IYAD K QOMSYAH",
+      "balance": "2000",
+      "currancy": "JOD",
+      "type": "Saving2",
+      "ibanNumber": "50560993000000",
+      "bbanNumber": "50560993000000"
+    },
+    {
+      "accountNumber": "045003750560013000000"   ,
+      "name": "IYAD K QOMSYAH",
+      "balance": "2000",
+      "currancy": "EUR",
+      "type": "Saving3",
+      "ibanNumber": "50560993000000",
+      "bbanNumber": "50560993000000"
+    }
+    
+  ]
+}
