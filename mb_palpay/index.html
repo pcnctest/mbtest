@@ -23,6 +23,8 @@
 </head>
 <body>
     
+    
+    
     <!--Main Layout Start-->
     <div data-id="main-layout" data-role="layout">
     <div data-role="header">
@@ -43,8 +45,6 @@
         </div>
     </div>
     <!--Log Main Layout Start-->
-    
-    
     
     <!--Log In View Start-->
     <div data-role="view" id="logInView">
@@ -75,9 +75,7 @@
     </div>
     <!--Log In View End-->
     
-    
-    
-    <!---------------------------------------- Home View Start --------------------------------------->
+    <!-- Home View Start -->
     <div data-role="view" id="homeView"  data-layout="main-layout">
             <ul data-role="listview" data-style="inset">
                 <li>
@@ -87,65 +85,225 @@
                 <li> </li>
                
                 <li>
-                    <a data-icon="bookmarks" href="#Bankaccounts">Bank Accounts</a>
+                    <a data-icon="bookmarks" href="#accounts">Accounts</a>
                 </li>
                 <li>
-                    <a data-icon="fastforward" href="#visaElectron">Transfers</a>
+                    <a data-icon="fastforward" href="#transfers">Transfers</a>
                 </li>
                 <li>
-                    <a data-icon="compose" href="#creditCards">Cheque Services</a>
+                    <a data-icon="compose" href="#chequeServices">Cheque Services</a>
                 </li>
                 <li>
-                    <a data-icon="cart" href="#CashCards">Bill Payments</a>
+                    <a data-icon="cart" href="#billPayments">Bill Payments</a>
                 </li>
                 <li>
-                    <a data-icon="globe" href="#CashCards">Locate Bank of Palestine</a>
+                    <a data-icon="globe" href="#cs">Locate Bank of Palestine</a>
                 </li>
                 <li>
-                    <a data-icon="info" href="#CashCards">Information</a>
+                    <a data-icon="info" href="#cs">Information</a>
                 </li><li>
-                    <a data-icon="more" href="#CashCards">Other services</a>
+                    <a data-icon="more" href="#cs">Other services</a>
                 </li>
                 
             </ul>
     </div>
+   <!-- Home View End -->
+    
    
+    <!--Bank Accounts View Start-->
+        <div data-role="view" id="bankAccounts"  data-layout="main-layout">
+            <ul data-role="listview" data-style="inset">
+                <li>
+                    <h3>Accounts</h3>
+                </li>
+                <li>
+                    <a data-icon="action" href="#balanceInquiry">Balance Inquiry</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#miniStatement">Mini statement</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#fullStatement">Full Statement Request</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#eBankingRequest">Cash Out</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#smsBankingRequest">Cash Out</a>
+                </li>
+            </ul>
+        </div>
+    <!--Bank Accounts View End-->
     
-    
+    <!-- Bank Accounts Views Start -->
     
     <!--------------------------------------- Accounts View Start ------------------------------------- -->
+             <div data-role="view" id="accounts"  data-layout="main-layout">
+            
+         <h3>Accounts</h3>
+         <ul data-role="listview" data-style="inset">
+               
+               
+                <li>
+                    <a data-icon="bookmarks" href="#bankAccounts">Bank Accounts</a>
+                </li>
+                <li>
+                    <a data-icon="featured" href="#visaElectron">Visa Electron</a>
+                </li>
+                <li>
+                    <a data-icon="stop" href="#creditCards">Credit Cards</a>
+                </li>
+                <li>
+                    <a data-icon="organize" href="#CashCards"> Cash Card</a>
+                </li>
+                               
+            </ul>
+    </div>
+    <!--------------------------------------- Accounts View End   --------------------------------------->
+    
+    <!--------------------------------------- Visa Electron View Start ------------------------------------- -->
+             <div data-role="view" id="visaElectron"  data-layout="main-layout">
+            
+         <h3>Visa Electron</h3>
+         <ul data-role="listview" data-style="inset">
+               
+               
+                <li>
+                    <a data-icon="downloads" href="#visaElectron">Request a Credit Card</a>
+                </li>
+                <li>
+                    <a data-icon="play" href="#visaElectron"> Activate a new card</a>
+                </li>
+                <li>
+                    <a data-icon="history" href="#visaElectron"> Change main currency</a>
+                </li>
+                <li>
+                    <a data-icon="pause" href="#visaElectron">Stop/Report stolen card</a>
+                </li>
+                               
+            </ul>
+    </div>
+    <!--------------------------------------- Visa Electron View End   --------------------------------------->
+    
+    <!--------------------------------------- Credit Cards View Start ------------------------------------- -->
+             <div data-role="view" id="creditCards"  data-layout="main-layout">
+            
+         <h3>Credit Cards</h3>
+         <ul data-role="listview" data-style="inset">
+               
+               
+                <li>
+                    <a data-icon="downloads" href="#creditCards">Request a credit card</a>
+                </li>
+                <li>
+                    <a data-icon="play" href="#creditCards">Activate a new card</a>
+                </li>
+                <li>
+                    <a data-icon="history" href="#creditCards">Display credit card ceiling</a>
+                </li>
+                <li>
+                    <a data-icon="pause" href="#creditCards">Display balance & last transactions</a>
+                </li>
+                               
+            </ul>
+    </div>
+    <!--------------------------------------- Credit Cards View End   --------------------------------------->
+    
+    <!--------------------------------------- Cash Card View Start ------------------------------------- -->
+             <div data-role="view" id="cashCard"  data-layout="main-layout">
+            
+         <h3>Cash Card</h3>
+         <ul data-role="listview" data-style="inset">
+               
+               
+                <li>
+                    <a data-icon="downloads" href="#cashCard">Request a Credit Card</a>
+                </li>
+                <li>
+                    <a data-icon="play" href="#cashCard">Activate a new card</a>
+                </li>
+                <li>
+                    <a data-icon="history" href="#cashCard">Display credit card ceiling</a>
+                </li>
+                <li>
+                    <a data-icon="share" href="#cashCard"> Display balance & last transactions</a>
+                </li>
+             <li>
+                    <a data-icon="pause" href="#cashCard">Stop/report stolen credit card</a>
+                </li>
+                               
+            </ul>
+    </div>
+    <!--------------------------------------- Cash Card View End   --------------------------------------->
+    
+    <!-- Bank Accounts Views End -->
+    
+    <!-- Transfers View Start -->
+     <div data-role="view" id="transfers"  data-layout="main-layout">
+            <ul data-role="listview" data-style="inset">
+                <li>
+                    <h3>Transfers</h3>
+                </li>
+                <li>
+                    <a data-icon="action" href="#transfers">Transfers between accounts</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#transfers">Transfer to another BOP account</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#transfers">Schedule a transfer</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#transfers">Review scheduled transfers</a>
+                </li>
+            </ul>
+        </div>    
+    <!-- Transfers View End -->
+    
+    <!-- Cheque Services Start -->
+     <div data-role="view" id="chequeServices"  data-layout="main-layout">
+            <ul data-role="listview" data-style="inset">
+                <li>
+                    <h3>Cheque Services</h3>
+                </li>
+                <li>
+                    <a data-icon="action" href="#chequeServices">Chequebook request</a>
+                </li>
+                <li>
+                    <a data-icon="pause" href="#chequeServices">Stop cheque</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#chequeServices">Cheque status inquiry</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#chequeServices">Seven year archive</a>
+                </li>
+            </ul>
+        </div>    
+    <!-- Cheque Services End -->
     
     
-    <!--------------------------------------- Accounts View End   ------------------------------------- -->
-    
-    <!-- Accounts Sub-Views Start -->
-    
-    <!-- Bank Accounts View Start -->
-    
-    <!-- Bank Accounts View End -->
-    
-    <!-- Visa Electron View Start -->
-    
-    <!-- Visa Electron View End -->
-    
-    <!-- Credit Cards View Start -->
-    
-    <!-- Credit Cards View End -->
-    
-    <!-- Cash Card View Start -->
-    
-    <!-- Cash Card View End -->
-    
-    <!-- Accounts Sub-Views End -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    <!-- Bill Payments Start -->
+     <div data-role="view" id="billPayments"  data-layout="main-layout">
+            <ul data-role="listview" data-style="inset">
+                <li>
+                    <h3>Bill Payments</h3>
+                </li>
+                <li>
+                    <a data-icon="action" href="#billPayments">Make a single payment</a>
+                </li>
+                <li>
+                    <a data-icon="pause" href="#billPayments">List of unpaid bills</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#billPayments">List of previously paid bills</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#billPayments">E-TOP-UP</a>
+                </li>
+            </ul>
+        </div>    
+    <!-- Bill Payments End -->
     
     
     <!--Money Transfers View Start-->
@@ -169,6 +327,7 @@
         </ul>
     </div>
     <!--Money Transfers View End-->
+    
     
     <!--Pay a friend View Start-->
         <div data-role="view" id="payFriend"  data-layout="main-layout">
@@ -212,33 +371,8 @@
         </div>
     <!--Pay a friend View End-->
     
-    <!--Money Transfers View Start-->
-        <div data-role="view" id="accounts"  data-layout="main-layout">
-            <ul data-role="listview" data-style="inset">
-                <li>
-                    <h3>Accounts</h3>
-                </li>
-                <li>
-                    <a data-icon="action" href="#balanceInquiry">Balance Inquiry</a>
-                </li>
-                <li>
-                    <a data-icon="action" href="#miniStatement">Mini statement</a>
-                </li>
-                <li>
-                    <a data-icon="action" href="#fullStatement">Full Statement Request</a>
-                </li>
-                <li>
-                    <a data-icon="action" href="#eBankingRequest">Cash Out</a>
-                </li>
-                <li>
-                    <a data-icon="action" href="#smsBankingRequest">Cash Out</a>
-                </li>
-            </ul>
-        </div>
-    <!--Money Transfers View End-->
-    
-   
-        <!--Balance Inquiry View Start-->
+     
+    <!--Balance Inquiry View Start-->
         <div data-role="view" id="balanceInquiry"  data-layout="main-layout">
             <h3>Balance Inquiry</h3>
             <div id="blancesList">
@@ -266,9 +400,9 @@
             </table>
 
         </div>
-        <!--Balance Inquiry View End-->
+    <!--Balance Inquiry View End-->
     
-      <!--Mini Statemnet View Start-->
+    <!--Mini Statemnet View Start-->
         <div data-role="view" id="miniStatement"  data-layout="main-layout">
             <h3>Mini Statemnet</h3>
             <h4><label>Date </label><label id=currentDate></label></h4>
@@ -292,9 +426,16 @@
             </table>
 
         </div>
-        <!--Mini Statemnet View End-->
+    <!--Mini Statemnet View End-->
     
     
+    
+    
+     <!--Comming Soon View Start-->
+        <div data-role="view" id="cs"  data-layout="main-layout">
+            <h3>Commming Soon .....</h3>
+        </div>
+    <!--Mini Statemnet View End-->
     
 </body>
 </html>
