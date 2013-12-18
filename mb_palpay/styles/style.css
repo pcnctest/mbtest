@@ -115,12 +115,12 @@ td,th{
 } */
 
 #logoContainer{
-     background-color:#664455;
+     background-image: url(../styles/images/palpay.png);
     background-repeat: no-repeat;
     text-align: center;
     width: 320px;
     height: 193px;
-    margin: 0px auto;
+    margin:  0px auto;
    
     }
 
