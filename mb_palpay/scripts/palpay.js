@@ -59,7 +59,7 @@ $(document).ready(function() {
     //////////////////// get trans actions end ////////////////////////////////////
     
     
-      /* $.getJSON("customerData.json", function( data ) {
+      /* $.getJSON("data/customerData.json", function( data ) {
            
            var customers=[];
            var i=1;
