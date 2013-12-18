@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
     <link href="styles/main.css" rel="stylesheet" />
+    <link href="styles/style.css" rel="stylesheet" />
 
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
@@ -15,146 +16,252 @@
     <script src="scripts/location.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="scripts/palpay.js"></script>
+    
 
 </head>
 <body>
-    <!--Home-->
-    <div id="tabstrip-home"
-        data-role="view"
-        data-title="Home">
-
-        <div class="view-content">
-            <h1>Welcome!</h1>
-            <a id="skin-change" data-role="button" data-click="app.changeSkin">Flat</a>
-            <p>
-                Icenium&trade; enables you to build cross-platform device applications regardless of your
-                    development platform by combining the convenience of a local development toolset with the
-                    power and flexibility of the cloud.
-            </p>
-            <div class="img"></div>
+    
+    <!--Main Layout Start-->
+    <div data-id="main-layout" data-role="layout">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title" id="viewTitle" >&nbsp;</span>
+            <a data-role="backbutton" data-align="left">Back</a>
         </div>
-    </div>
-
-    <!--Login-->
-    <div id="tabstrip-login"
-        data-role="view"
-        data-title="Login"
-        data-model="app.loginService.viewModel">
-
-        <div class="view-content">
-            <div class="logo"></div>
-            <h3 data-bind="invisible: isLoggedIn">Enter your credentials:</h3>
-            <h1 class="welcome" data-bind="visible: isLoggedIn">Welcome, <span data-bind="text: username"></span>!
-            </h1>
-            <div class="buttonArea">
-                <input type="submit" id="logout" data-role="button" data-bind="click: onLogout, visible: isLoggedIn" class="login-button" value="Logout" />
-            </div>
-
-            <form data-bind="events: { keyup: checkEnter }">
-                <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
-                    <li>
-                        <label>
-                            Username
-                                <input type="text" data-bind="value: username" />
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            Password
-                                <input type="password" data-bind="value: password" />
-                        </label>
-                    </li>
-                </ul>
-
-                <div class="buttonArea">
-                    <input type="submit" id="login" data-role="button" data-bind="click: onLogin, invisible: isLoggedIn" class="login-button" value="Login" />
-                </div>
-            </form>
-        </div>
-
-    </div>
-
-    <!--Location-->
-    <div id="tabstrip-location"
-        data-role="view"
-        data-title="Location"
-        data-init="app.locationService.initLocation"
-        data-show="app.locationService.show"
-        data-hide="app.locationService.hide"
-        data-model="app.locationService.viewModel"
-        data-stretch="true">
-
-        <div id="no-map" data-bind="invisible: isGoogleMapsInitialized">
-            Location requires internet connection to display the map.
-        </div>
-        <div id="map-search-wrap" data-bind="visible: isGoogleMapsInitialized">
-            <button id="map-navigate-home" data-bind="click: onNavigateHome"></button>
-            <form onsubmit="return false;">
-                <input id="map-address" type="search" data-bind="value: address" placeholder="Address" />
-                <input id="map-search" type="submit" value="" data-bind="click: onSearchAddress" />
-            </form>
-        </div>
-        <div id="map-canvas" data-bind="visible: isGoogleMapsInitialized"></div>
-
-    </div>
-
-    <!--Weather-->
-    <div id="tabstrip-weather"
-        data-role="view"
-        data-title="Weather"
-        data-model="app.weatherService.viewModel">
-
-        <div class="weather">
-            <p class="weather-title">20-Day Forecast</p>
-
-            <div class="separator">
-                <div class="dark"></div>
-                <div class="light"></div>
-            </div>
-
-            <ul class="forecast-list"
-                data-role="listview"
-                data-bind="source: weatherDataSource"
-                data-template="weather-forecast-template">
-            </ul>
-        </div>
-    </div>
-
-    <!--Weather forecast template-->
-    <script type="text/x-kendo-tmpl" id="weather-forecast-template">
-        <div>
-            <div class="position-left">
-                <span class="weather-info date">${day}</span>
-            </div>
-            <div class="position-right">
-                <span class="weather-info temperature high">${highTemperature}<sup>&deg;</sup></span>
-                <span class="weather-info temperature low">${lowTemperature}<sup>&deg;</sup></span>
-            </div>
-            <div class="position-center">
-                <span class="weather-icon ${image}"></span>
-            </div>
-        </div>
-    </script>
-
-    <!--Layout-->
-    <div data-role="layout" data-id="tabstrip-layout">
-
-        <!--Header-->
-        <div data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
-            </div>
-        </div>
-
-        <!--Footer-->
+    </div>    
         <div data-role="footer">
             <div data-role="tabstrip">
-                <a href="#tabstrip-home" data-icon="home">Home</a>
-                <a href="#tabstrip-login" data-icon="contacts">Login</a>
-                <a href="#tabstrip-location" data-icon="search">Location</a>
-                <a href="#tabstrip-weather" data-icon="globe">Weather</a>
+                
+            </div>
+        </div>
+        <div data-role="footer">
+            <div data-role="tabstrip">
+                <a data-icon="favorites" href="">Button</a>
             </div>
         </div>
     </div>
+    <!--Log Main Layout Start-->
+    
+    
+    
+    <!--Log In View Start-->
+    <div data-role="view" id="logInView">
+      
+        <div id="logoContainer"></div>
+        
+        <h3 id="yourInformation">
+            <br>
+                 Please Enter your log in information:
+            <br>
+            
+              <a id="skin-change" data-role="button" data-click="app.changeSkin">Switch Skin</a>
+        </h3>
+        
+        <form id="logInForm">
+            <ul>
+               <!-- <ui><label>
+                    Username<input type="text"/></label></ui>-->
+              <!--  <ui><label>
+                    Password<input type="password"/></label></ui>-->
+            </ul>
+        
+            <div class="buttonArea">
+                    <input type="submit" id="login" data-role="button"  class="login-button" value="Login"  href="#homeView"/>
+                </div>
+        </form>
+           
+    </div>
+    <!--Log In View End-->
+    
+    
+    
+    <!--Home View Start-->
+    <div data-role="view" id="homeView"  data-layout="main-layout">
+            <ul data-role="listview" data-style="inset">
+                <li>
+
+                </li>
+                <li>Welcome to PalPay Mobile Banking</li>
+                <li> </li>
+                <li>
+                    <a data-icon="history" href="#moneyTransfers">Money Transfers</a>
+                </li>
+                <li>
+                    <a data-icon="cart" href="#Payments">Payments</a>
+                </li>
+                
+                <li>
+                    <a data-icon="organize" href="#CreditCard">Credit Card</a>
+                </li>
+                <li>
+                    <a data-icon="bookmarks" href="#Accounts">Accounts</a>
+                </li>
+                <li>
+                    <a data-icon="globe" href="#LocateATM">Locate ATM</a>
+                </li>
+                <li>
+                    <a data-icon="featured" href="#SpecialOffers">Special Offers</a>
+                </li>
+                <li>
+                    <a data-icon="compose" href="#Messaging">Messaging</a>
+                </li>
+                
+            </ul>
+    </div>
+    <!--Home View End-->
+    
+    <!--Money Transfers View Start-->
+    <div data-role="view" id="moneyTransfers"  data-layout="main-layout">
+        <ul data-role="listview" data-style="inset">
+                <li>
+
+                </li>
+                <li>Money Transfers</li>
+                <li> </li>
+                <li>
+                    <a data-icon="fastforward" href="#payFriend">Pay a friend</a>
+                </li>
+                <li>
+                    <a data-icon="downloads" href="#cashIn">Cash In</a>
+                </li>
+                
+                <li>
+                    <a data-icon="action" href="#cashOut">Cash Out</a>
+                </li>
+        </ul>
+    </div>
+    <!--Money Transfers View End-->
+    
+    <!--Pay a friend View Start-->
+        <div data-role="view" id="payFriend"  data-layout="main-layout">
+            <ul data-role="listview" data-style="inset">
+                <li>
+
+                </li>
+                <li>Pay a friend</li>
+
+                <li> 
+                    <label>Select Friend
+                         <select id="friend">
+                            <option>Marsha Cespedes</option>
+                            <option>Sunday Hippler</option>
+                            <option>Beverly Soderlund</option>
+                            <option>Roscoe Gardin </option>
+                            <option>Chun Heber </option>
+                            <option>Jestine Masone </option>
+                            <option>Woodrow Mandez</option>
+                            <option>Rina Messenger </option>
+                            <option>Wilda Shadle </option>
+                            <option>Liana Dolph </option>
+                            <option>Odis Bueche </option>
+                            <option>Adrianne Lupercio</option>
+                            <option>Magdalena Ohern </option>
+                            <option>Erinn Mcgruder </option>
+                            <option>Doreen Bopp </option>
+                            <option>Leonard Gordon </option>
+                            <option>Ariana Arora </option>
+                            <option>Patrice Courchesne </option>
+                            <option>Rana Hedberg </option>
+                            <option>Lauryn Prine </option>
+                        </select>
+                    </label>
+                </li>
+
+                <li>
+                    <a data-icon="action" href="#cashOut">Cash Out</a>
+                </li>
+            </ul>
+        </div>
+    <!--Pay a friend View End-->
+    
+    <!--Money Transfers View Start-->
+        <div data-role="view" id="Accounts"  data-layout="main-layout">
+            <ul data-role="listview" data-style="inset">
+                <li>
+                    <h3>Accounts</h3>
+                </li>
+                <li>
+                    <a data-icon="action" href="#balanceInquiry">Balance Inquiry</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#miniStatement">Mini statement</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#fullStatement">Full Statement Request</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#eBankingRequest">Cash Out</a>
+                </li>
+                <li>
+                    <a data-icon="action" href="#smsBankingRequest">Cash Out</a>
+                </li>
+            </ul>
+        </div>
+    <!--Money Transfers View End-->
+    
+   
+        <!--Balance Inquiry View Start-->
+        <div data-role="view" id="balanceInquiry"  data-layout="main-layout">
+            <h3>Balance Inquiry</h3>
+            <div id="blancesList">
+                
+            </div >
+            
+            <table id="grid">
+                <colgroup>
+                    <col style="width:100px" />
+                    <col style="width:200px" />
+                    <col />
+                </colgroup>
+                <thead >
+                    <tr >
+                        <th>Account Number</th>
+                        <th>IBAN/BBAN</th>
+                        <th>Type</th>
+                        <th>Balance<br>available</th>
+                        
+                        
+
+                    </tr>
+                </thead>
+
+                <tbody id="tableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+        <!--Balance Inquiry View End-->
+    
+      <!--Mini Statemnet View Start-->
+        <div data-role="view" id="miniStatement"  data-layout="main-layout">
+            <h3>Mini Statemnet</h3>
+            <h4><label>Date </label><label id=currentDate></label></h4>
+            <div id="blancesList">
+                
+            </div>
+            <table >
+                <thead>
+                    <tr>
+                        <th>Transaction Date</th>
+                        <th>Explanation</th>
+                        <th>Amount</th>
+                        
+                    </tr>
+                </thead>
+
+                <tbody id="transactionsTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+        <!--Mini Statemnet View End-->
+    
+    
+    
 </body>
 </html>
