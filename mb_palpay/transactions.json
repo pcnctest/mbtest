@@ -1,0 +1,84 @@
+{
+  "transactions": [
+    {
+      "date": "12/12/2013",
+      "explanation": "POINT OF SALE PURCHASE TRANSACTION",
+      "ammount": "-53"
+    },
+    {
+      "date": "12/12/2013",
+      "explanation": "CASH WITHDRAWAL FROM ATM",
+      "ammount": "-150"
+    },
+    {
+      "date": "13/12/2013",
+      "explanation": "POINT OF SALE PURCHASE TRANSACTION",
+      "ammount": "-71"
+    },
+    {
+      "date": "13/12/2013",
+      "explanation": "CASH WITHDRAWAL FROM ATM.",
+      "ammount": "-100"
+    },
+    {
+      "date": "14/12/2013",
+      "explanation": "CASH WITHDRAWAL FROM ATM.",
+      "ammount": "-100"
+    },
+    {
+      "date": "15/12/2013",
+      "explanation": "ELCTRONIC TRANSACTION",
+      "ammount": "-150"
+    },
+    {
+      "date": "17/12/2013",
+      "explanation": "ELCTRONIC TRANSACTION",
+      "ammount": "-200"
+    },
+    {
+      "date": "19/12/2013",
+      "explanation": "POINT OF SALE PURCHASE TRANSACTION",
+      "ammount": "-85"
+    },
+    {
+      "date": "20/12/2013",
+      "explanation": "CASH WITHDRAWAL FROM ATM.",
+      "ammount": "-500"
+    },
+    {
+      "date": "21/12/2013",
+      "explanation": "POINT OF SALE PURCHASE TRANSACTION",
+      "ammount": "-55"
+    },
+    {
+      "date": "22/12/2013",
+      "explanation": "ELCTRONIC TRANSACTION",
+      "ammount": "-250"
+    },
+    {
+      "date": "23/12/2013",
+      "explanation": "CASH WITHDRAWAL FROM ATM.",
+      "ammount": "-200"
+    },
+    {
+      "date": "23/12/2013",
+      "explanation": "POINT OF SALE PURCHASE TRANSACTION",
+      "ammount": "-75"
+    },
+    {
+      "date": "25/12/2013",
+      "explanation": "ELCTRONIC TRANSACTION",
+      "ammount": "-543"
+    },
+    {
+      "date": "27/12/2013",
+      "explanation": "ELCTRONIC TRANSACTION",
+      "ammount": "-120"
+    },
+    {
+      "date": "10/12/2013",
+      "explanation": "Electronic Trans",
+      "ammount": "-300"
+    }
+  ]
+}
