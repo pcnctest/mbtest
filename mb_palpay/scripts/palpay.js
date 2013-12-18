@@ -36,7 +36,7 @@ $(document).ready(function() {
     
     //////////////////// get trans actions start ////////////////////////////////////
     //////////////////////////////////////////////////////////////////////
-        $.getJSON("transactions.json", function(data) {
+        $.getJSON("data/transactions.json", function(data) {
             var transactions = [];
            
             $.each(data.transactions, function(key, val) {
@@ -49,7 +49,7 @@ $(document).ready(function() {
               
                 );       
             });
-          //  console.log(transactions);
+            console.log(transactions);
 
             $('#transactionsTableBody').html(transactions);
         });
@@ -95,7 +95,7 @@ $(document).ready(function() {
     
     /////////////////// new Customer Data function ///////////////////////////////
     
-     $.getJSON("newCustomerData.json", function( data ) {
+     $.getJSON("data/newCustomerData.json", function( data ) {
            
            var customers=[];
            
