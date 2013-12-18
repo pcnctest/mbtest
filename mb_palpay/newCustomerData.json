@@ -1,0 +1,76 @@
+{
+   "accounts":[
+      {
+         "accountNumber":"0450/0375056/001/1607/000",
+         "IBAN_BBAN":"PS40 PALS 0450 0375 0560 0116 0700 0",
+         "type":"overdraft master card USD",
+         "availableBalance":"100025.5",
+         "currentBalance":"12025.75",
+         "currency":"USD"
+      },
+      {
+         "accountNumber":"0450/0375056/001/1735/001",
+         "IBAN_BBAN":"PS26 PALS 0450 0375 0560 0117 3500 1",
+         "type":"OVERDUE NORMAL LOANS USD",
+         "availableBalance":"10015.25",
+         "currentBalance":"11025.75",
+         "currency":"USD"
+      },
+      {
+         "accountNumber":"0450/0375056/001/3000/000",
+         "IBAN_BBAN":"PS14 PALS 0450 0375 0560 0130 0000 0",
+         "type":"Current Account_Residence_private sector USD",
+         "availableBalance":"1875.48",
+         "currentBalance":"1875.48",
+         "currency":"USD"
+      },
+      {
+         "accountNumber":"0450/0375056/029/3000/000",
+         "IBAN_BBAN":"PS79 PALS 0450 0375 0560 2930 0000 0",
+         "type":"Current Account_Residence_private sector JOD",
+         "availableBalance":"20.082",
+         "currentBalance":"20.082",
+         "currency":"JOD"
+      },
+      {
+         "accountNumber":"0450/0375056/001/1735/001",
+         "IBAN_BBAN":"PS26 PALS 0450 0375 0560 0117 3500 1",
+         "type":"OVERDUE NORMAL LOANS USD",
+         "availableBalance":"10015.25",
+         "currentBalance":"11025.75",
+         "currency":"JOD"
+      },
+      {
+         "accountNumber":"0450/0375056/099/3000/000",
+         "IBAN_BBAN":"PS96 PALS 0450 0375 0560 9930 0000 0 ",
+         "type":"Current Account_Residence_private sector ILS",
+         "availableBalance":"5015.25",
+         "currentBalance":"5025.75",
+         "currency":"ILS"
+      },
+      {
+         "accountNumber":"2343567676890",
+         "IBAN_BBAN":"NA",
+         "type":"Mastercard Credit Gold<br>Mastercard Credit standart<br>Visa CreditGold",
+         "availableBalance":"78912.00",
+         "currentBalance":"6000.00",
+         "currency":"USD"
+      },
+      {
+         "accountNumber":"2345678912",
+         "IBAN_BBAN":"NA",
+         "type":"Easy Life",
+         "availableBalance":"345688.00",
+         "currentBalance":"3000",
+         "currency":"USD"
+      },
+      {
+         "accountNumber":"11111111111",
+         "IBAN_BBAN":"NA",
+         "type":"Cash Card",
+         "availableBalance":"100",
+         "currentBalance":"100",
+         "currency":"USD"
+      }
+   ]
+}
