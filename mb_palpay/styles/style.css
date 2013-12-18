@@ -5,10 +5,11 @@ Generic Styling, for Desktops/Laptops
  table { 
   width: 100%; 
   border-collapse: collapse; 
+     table-layout: fixed;
 }
 /* Zebra striping */
  tr:nth-of-type(odd) { 
-  background: #D795B1; 
+  background: #278aa0; 
 }
  th { 
   background: #333; 
@@ -21,7 +22,9 @@ Generic Styling, for Desktops/Laptops
   text-align: left; 
 }
 
-
+td{
+    word-wrap:break-word
+}
 
 
 @media 
