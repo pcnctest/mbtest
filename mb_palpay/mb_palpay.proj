@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>60d1463c-90f3-4dea-bb60-2ca4a3ba4676</ProjectGuid>
     <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
-    <AppIdentifier>com.pcnc.mbpalpay</AppIdentifier>
+    <AppIdentifier>com.telerik.mbpalpay</AppIdentifier>
     <ProjectName>mb_palpay</ProjectName>
     <IsRunnable>true</IsRunnable>
     <FrameworkVersion>3.2.0</FrameworkVersion>
