@@ -41,10 +41,12 @@ $(document).ready(function() {
            
             $.each(data.transactions, function(key, val) {
                 var $accountInfo = $(this).get(0);     
-             
+             var explanation_toLower=($accountInfo.explanation).toLowerCase();
+             var explanation_Cap_first=  explanation_toLower.substr(0,1).toUpperCase()+explanation_toLower.substr(1); 
+                console.log(explanation_Cap_first);
             //    console.log($accountInfo);
                 transactions.push("<tr><td>" + $accountInfo.date + "</td><td>"
-                               + $accountInfo.explanation + "</td><td>"
+                               + explanation_Cap_first + "</td><td>"
                                + $accountInfo.ammount + "</td></tr>"
               
                 );       
@@ -87,7 +89,8 @@ $(document).ready(function() {
        */
        
     
-    
+    var string = numeral(1000).format('0,0');
+    console.log(string);
     
     
     
@@ -106,10 +109,21 @@ $(document).ready(function() {
                var iban_st=$accountInfo.IBAN_BBAN.substring(0,9);
                var iban_en=$accountInfo.IBAN_BBAN.substring(9);
                
+               
+               var type_toLower=($accountInfo.type).toLowerCase();
+               var len=type_toLower.length;
+               var cur=($accountInfo.type).substr(len-4);
+               console.log(cur);
+               var type_Cap_first=type_toLower.substr(0,1).toUpperCase()+type_toLower.substr(1,len-4)+cur;
+               var type_Cap_first=type_toLower.substr(0,1).toUpperCase()+type_toLower.substr(1,len-4)+cur;
+               
+               
+               
+               
                console.log(iban_en);
                customers.push("<tr><td>"+$accountInfo.accountNumber+"</td><td>"+iban_st+"<br>"+iban_en+"</td><td>"
-               +$accountInfo.type+"</td><td>"
-               +"avl."+$accountInfo.availableBalance+"<br>cur:"+$accountInfo.currentBalance+"</td></tr>"
+               +type_Cap_first+"</td>"
+               +"<td>"+$accountInfo.availableBalance+"</td><td>"+$accountInfo.currentBalance+"</td></tr>"
               
               
                );       

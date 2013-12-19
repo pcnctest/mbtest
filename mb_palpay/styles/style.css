@@ -4,7 +4,7 @@ Generic Styling, for Desktops/Laptops
 */
  table { 
   width: 100%; 
-  border-collapse: collapse; 
+  border-collapse:separate; 
      table-layout: fixed;
 }
 /* Zebra striping */
@@ -55,7 +55,7 @@ only screen and (max-width: 760px),
 		border: none;
 		border-bottom: 1px solid #eee; 
 		position: relative;
-		padding-left: 50%; 
+		padding-left: 45%; 
 	}
 	
 	#balanceInquiry td:before { 
@@ -64,7 +64,7 @@ only screen and (max-width: 760px),
 		/* Top/left values mimic padding */
 		top: 6px;
 		left: 6px;
-		width: 45%; 
+		width: 50%; 
 		padding-right: 10px; 
 		white-space: nowrap;
 	}
@@ -76,7 +76,8 @@ only screen and (max-width: 760px),
     #balanceInquiry td:nth-of-type(1):before { content: "Account Number"; }
 	#balanceInquiry td:nth-of-type(2):before { content: "IBAN/BBAN "; }
     #balanceInquiry td:nth-of-type(3):before { content: "Type"; }
-	#balanceInquiry td:nth-of-type(4):before { content: "Balance"; }
+	#balanceInquiry td:nth-of-type(4):before { content: "Available Balance"; }
+	#balanceInquiry td:nth-of-type(5):before { content: "Current Balance"; }
     
   /*  td:nth-of-type(1):before { content: "Transaction Date"; }
     td:nth-of-type(2):before { content: "Explanation"; }
