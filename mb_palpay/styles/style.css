@@ -37,7 +37,12 @@ only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 
 	/* Force table to not be like tables anymore */
-	#balanceInquiry  table, #balanceInquiry thead, #balanceInquiry tbody, #balanceInquiry th,#balanceInquiry  td,#balanceInquiry tr { 
+	#balanceInquiry table{
+       border:2px solid;
+        width:99%;
+        
+    }
+    #balanceInquiry  table, #balanceInquiry thead, #balanceInquiry tbody, #balanceInquiry th,#balanceInquiry  td,#balanceInquiry tr { 
 		display: block; 
 	}
 	
@@ -52,10 +57,11 @@ only screen and (max-width: 760px),
 	
 	#balanceInquiry td { 
 		/* Behave  like a "row" */
-		border: none;
+		border: 1px solid #eee;
 		border-bottom: 1px solid #eee; 
+        
 		position: relative;
-		padding-left: 45%; 
+		padding-left: 40%; 
 	}
 	
 	#balanceInquiry td:before { 
@@ -64,7 +70,7 @@ only screen and (max-width: 760px),
 		/* Top/left values mimic padding */
 		top: 6px;
 		left: 6px;
-		width: 50%; 
+		width: 60%; 
 		padding-right: 10px; 
 		white-space: nowrap;
 	}
