@@ -43,7 +43,7 @@ $(document).ready(function() {
                 var $accountInfo = $(this).get(0);     
              var explanation_toLower=($accountInfo.explanation).toLowerCase();
              var explanation_Cap_first=  explanation_toLower.substr(0,1).toUpperCase()+explanation_toLower.substr(1); 
-                console.log(explanation_Cap_first);
+             //   console.log(explanation_Cap_first);
             //    console.log($accountInfo);
                 transactions.push("<tr><td>" + $accountInfo.date + "</td><td>"
                                + explanation_Cap_first + "</td><td>"
@@ -51,7 +51,7 @@ $(document).ready(function() {
               
                 );       
             });
-            console.log(transactions);
+          //  console.log(transactions);
 
             $('#transactionsTableBody').html(transactions);
         });
@@ -69,7 +69,7 @@ $(document).ready(function() {
            $.each(data.accounts,function(key,val){
                var $accountInfo = $(this).get(0);     
              //  customers.push("<td>");
-               console.log($accountInfo);
+            //   console.log($accountInfo);
                customers.push("<tr><td>"+$accountInfo.accountNumber+"</td><td>"
                +$accountInfo.name+"</td><td>"
                +$accountInfo.balance+"</td><td>"
@@ -89,9 +89,9 @@ $(document).ready(function() {
        */
        
     
-    var string = numeral(1000).format('0,0');
+   /* var string = numeral(1000).format('0,0');
     console.log(string);
-    
+    */
     
     
     
@@ -105,7 +105,7 @@ $(document).ready(function() {
                    
            $.each(data.accounts,function(key,val){
                var $accountInfo = $(this).get(0);     
-               console.log($accountInfo);
+             //  console.log($accountInfo);
                var iban_st=$accountInfo.IBAN_BBAN.substring(0,9);
                var iban_en=$accountInfo.IBAN_BBAN.substring(9);
                
@@ -113,17 +113,22 @@ $(document).ready(function() {
                var type_toLower=($accountInfo.type).toLowerCase();
                var len=type_toLower.length;
                var cur=($accountInfo.type).substr(len-4);
-               console.log(cur);
+             //  console.log(cur);
                var type_Cap_first=type_toLower.substr(0,1).toUpperCase()+type_toLower.substr(1,len-4)+cur;
                var type_Cap_first=type_toLower.substr(0,1).toUpperCase()+type_toLower.substr(1,len-4)+cur;
                
+               var curBalance=$accountInfo.currentBalance;
+               var avaBalance=$accountInfo.availableBalance;
                
                
+               var currentBalanceFormated = numeral(curBalance).format('0,0');
+               var availableBalanceFormated = numeral(avaBalance).format('0,0');
                
-               console.log(iban_en);
+               
+           //    console.log(iban_en);
                customers.push("<tr><td>"+$accountInfo.accountNumber+"</td><td>"+iban_st+"<br>"+iban_en+"</td><td>"
                +type_Cap_first+"</td>"
-               +"<td>"+$accountInfo.availableBalance+"</td><td>"+$accountInfo.currentBalance+"</td></tr>"
+               +"<td>"+availableBalanceFormated+" "+cur+"</td><td>"+currentBalanceFormated +" "+cur+"</td></tr>"
               
               
                );       
@@ -139,14 +144,6 @@ $(document).ready(function() {
     
     //////////////////////////////////////////////////////////////////////////////
     
-    
-    
-    
-    
-    
-    
-    
-       
     
    
     var listItems = "";
@@ -183,7 +180,7 @@ var mm = today.getMonth()+1; //January is 0!
 var yyyy = today.getFullYear();
 if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = dd+'/'+mm+'/'+yyyy;
        
-    console.log(today);
+  //  console.log(today);
     $(currentDate).html(today);
     //queryend
 })
