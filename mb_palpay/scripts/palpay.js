@@ -121,14 +121,14 @@ $(document).ready(function() {
                var avaBalance=$accountInfo.availableBalance;
                
                
-               var currentBalanceFormated = numeral(curBalance).format('0,0');
-               var availableBalanceFormated = numeral(avaBalance).format('0,0');
+               var currentBalanceFormated = numeral(curBalance).format('0,0.00');
+               var availableBalanceFormated = numeral(avaBalance).format('0,0.00');
                
                
            //    console.log(iban_en);
                customers.push("<tr><td>"+$accountInfo.accountNumber+"</td><td>"+iban_st+"<br>"+iban_en+"</td><td>"
                +type_Cap_first+"</td>"
-               +"<td>"+availableBalanceFormated+" "+cur+"</td><td>"+currentBalanceFormated +" "+cur+"</td></tr>"
+               +"<td><strong>"+availableBalanceFormated+" "+cur+"</strong></td><td><strong>"+currentBalanceFormated +" "+cur+"</strong></td></tr>"
               
               
                );       

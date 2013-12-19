@@ -51,7 +51,7 @@
       {
          "accountNumber":"2343567676890",
          "IBAN_BBAN":"NA",
-         "type":"Mastercard Credit Gold<br>Mastercard Credit standart<br>Visa CreditGold",
+         "type":"Mastercard Credit Gold<br>Mastercard Credit standart<br>Visa CreditGold USD",
          "availableBalance":"78912.00",
          "currentBalance":"6000.00",
          "currency":"USD"
@@ -59,7 +59,7 @@
       {
          "accountNumber":"2345678912",
          "IBAN_BBAN":"NA",
-         "type":"Easy Life",
+         "type":"Easy Life NIS",
          "availableBalance":"345688.00",
          "currentBalance":"3000",
          "currency":"USD"
@@ -67,7 +67,7 @@
       {
          "accountNumber":"11111111111",
          "IBAN_BBAN":"NA",
-         "type":"Cash Card",
+         "type":"Cash Card USD",
          "availableBalance":"100",
          "currentBalance":"100",
          "currency":"USD"

@@ -9,7 +9,7 @@ Generic Styling, for Desktops/Laptops
 }
 /* Zebra striping */
  tr:nth-of-type(odd) { 
-  background: #278aa0; 
+  background: #2e5c69; 
 }
  th { 
   background: #333; 
@@ -61,7 +61,7 @@ only screen and (max-width: 760px),
 		border-bottom: 1px solid #eee; 
         
 		position: relative;
-		padding-left: 40%; 
+		padding-left: 43%; 
 	}
 	
 	#balanceInquiry td:before { 
@@ -133,7 +133,7 @@ td,th{
 
 
 
-/*
+
 km-android .km-navbar .km-view-title 
 {
     display: inline-block;
@@ -144,7 +144,7 @@ km-android .km-navbar .km-view-title
 {
     
 }
-*/
+
 
 
 
