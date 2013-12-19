@@ -45,9 +45,12 @@ $(document).ready(function() {
              var explanation_Cap_first=  explanation_toLower.substr(0,1).toUpperCase()+explanation_toLower.substr(1); 
              //   console.log(explanation_Cap_first);
             //    console.log($accountInfo);
+                var unFormatedAmount =$accountInfo.ammount;
+                var formatedAmount=numeral(unFormatedAmount).format('0,0.0');
+                
                 transactions.push("<tr><td>" + $accountInfo.date + "</td><td>"
                                + explanation_Cap_first + "</td><td>"
-                               + $accountInfo.ammount + "</td></tr>"
+                               +formatedAmount+ "</td></tr>"
               
                 );       
             });
@@ -182,7 +185,24 @@ if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = dd+'/'+mm+'/'+yyyy;
        
   //  console.log(today);
     $(currentDate).html(today);
+  
+     function LogInClicked() { 
+     var test =$("#userName").value;
+         console.log(test);
+         
+         
+     }
+    
+    
+    document.getElementById("login").onclick = LogInClicked;
+    
+    
+    
+    
+    
+    
     //queryend
+    
 })
 
 

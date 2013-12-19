@@ -68,7 +68,7 @@
             <br>
             <ul>
                 <ui><label>
-                    Username <input type="text"/></label></ui> 
+                    Username <input type="text" id="userName" name="log"/></label></ui> 
                 <br>
                 <ui><label>
                     Password&nbsp <input type="password"/></label></ui>
@@ -84,12 +84,12 @@
     
     <!-- Home View Start -->
     <div data-role="view" id="homeView"  data-layout="main-layout">
-            <ul data-role="listview" data-style="inset">
-                <li>
-
-                </li>
-                <li>Welcome to PalPay Mobile Banking</li>
-                <li> </li>
+         
+                <h4>Welcome to BOP Mobile Banking</h4>
+                <h6>Mr. Iyad Qumsieh you're last login was today 9:43 am</h6>
+                  
+        
+        <ul data-role="listview" data-style="inset">
                
                 <li>
                     <a data-icon="bookmarks" href="#accounts">Accounts</a>
@@ -147,9 +147,9 @@
     <!--------------------------------------- Accounts View Start ------------------------------------- -->
              <div data-role="view" id="accounts"  data-layout="main-layout">
             
-         <h3>Accounts</h3>
+        
          <ul data-role="listview" data-style="inset">
-               
+                <li><h3>Accounts</h3></li>
                
                 <li>
                     <a data-icon="bookmarks" href="#bankAccounts">Bank Accounts</a>
@@ -429,16 +429,21 @@
     <!--Mini Statemnet View Start-->
         <div data-role="view" id="miniStatement"  data-layout="main-layout">
             <h3>Mini Statemnet</h3>
-            <h4><label>Date </label><label id=currentDate></label></h4>
+            <h5><label>Date </label><label id=currentDate></label></h5>
+            <h5><label>Name : </label>Iyad Qumsieh<label ></label></h5>
+            <h5><label>Account Number :</label>0450/0375056/099/3000/000<label ></label></h5>
+            <h5><label>Account Type :</label> Current account residence private<label ></label></h5>
+            <h5><label>Currency : </label>Israeli Shekel<label ></label></h5>
+           
             <div id="blancesList">
                 
             </div>
             <table >
                 <thead>
                     <tr>
-                        <th>Transaction Date</th>
-                        <th>Explanation</th>
-                        <th>Amount</th>
+                        <th style="width:25%">Trans. Date</th>
+                        <th style="width:50%">Explanation</th>
+                        <th style="width:">Amount</th>
                         
                     </tr>
                 </thead>
