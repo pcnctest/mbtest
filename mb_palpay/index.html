@@ -64,21 +64,54 @@
              <!-- <a id="skin-change" data-role="button" data-click="app.changeSkin">Switch Skin</a>-->
         </h3>
         
-        <form id="logInForm">
+         <p style="display: none;" class="error">Error. Please enter correct email &amp; password.</p>
+        
+        <form data-bind="events: { keyup: checkEnter }">
+            
+                <ul data-role="listview" data-style="inset">
+                    <li>
+                        <label>
+                            Username
+                                <input type="text" id="username"/>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Password
+                                <input type="password" id="password"/>
+                        </label>
+                    </li>
+                </ul>
+
+                <div class="buttonArea">
+                    <input type="submit" id="submit" data-role="button" class="login-button" value="LOG IN"/>
+                </div>
+            </form>
+        
+        
+        
+        
+        <!-- old log in form 
+        <form id="logInForm" >
             <br>
             <ul>
-                <ui><label>
-                    Username <input type="text" id="userName" /></label></ui> 
-                <br>
-                <ui><label>
-                    Password&nbsp <input type="password"/></label></ui>
+                <li><label>
+                    Username <input type="text" data-bind="value: username" /></label></li> 
+                
+                <li><label>
+                    Password&nbsp <input type="password" data-bind="value: password" /></label></li>
             </ul> 
-       
+      
             <div class="buttonArea">
-                    <input type="submit" id="login" data-role="button"  class="login-button" value="Login"  href="#homeView"/>
+                   <!-- <input type="submit" id="login" data-role="button"  class="login-button" value="Login" /> 
+                <input type="submit" id="login" data-role="button" data-bind="click: onLogin, invisible: isLoggedIn" class="login-button" value="Login" />
                 </div>
-        </form>
+        </form>  -->
            
+        
+        
+        
+        
     </div>
     <!--Log In View End-->
     

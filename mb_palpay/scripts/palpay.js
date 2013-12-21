@@ -186,15 +186,17 @@ if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = dd+'/'+mm+'/'+yyyy;
   //  console.log(today);
     $(currentDate).html(today);
   
-     function LogInClicked() { 
+    
+    
+    /* function LogInClicked() { 
      var test =$("#userName").value;
          console.log(test);
          
          
      }
+    */
     
-    
-    document.getElementById("login").onclick = LogInClicked;
+   // document.getElementById("login").onclick = LogInClicked;
     
     
     

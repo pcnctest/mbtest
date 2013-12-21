@@ -1,52 +1,23 @@
-(function (global) {
-    var LoginViewModel,
-        app = global.app = global.app || {};
+$(document).ready(function() {
+    $('#username').focus();
 
-    LoginViewModel = kendo.data.ObservableObject.extend({
-        isLoggedIn: false,
-        username: "",
-        password: "",
+    $('#submit').click(function() {
 
-        onLogin: function () {
-            var that = this,
-                username = that.get("username").trim(),
-                password = that.get("password").trim();
+        event.preventDefault(); // prevent PageReLoad
+        $('.error').css('display', 'none'); // hide error msg
 
-            if (username === "" || password === "") {
-                navigator.notification.alert("Both fields are required!",
-                    function () { }, "Login failed", 'OK');
-
-                return;
-            }
-
-            that.set("isLoggedIn", true);
-        },
-
-        onLogout: function () {
-            var that = this;
-
-            that.clearForm();
-            that.set("isLoggedIn", false);
-        },
-
-        clearForm: function () {
-            var that = this;
-
-            that.set("username", "");
-            that.set("password", "");
-        },
-
-        checkEnter: function (e) {
-            var that = this;
-
-            if (e.keyCode == 13) {
-                $(e.target).blur();
-                that.onLogin();
-            }
+        var ValEmail = $('#username').val() === 'bop'; // Email Value
+        var ValPassword = $('#password').val() === '123'; // Password Value
+        if (ValEmail === true && ValPassword === true) { // if ValEmail & ValPass are as above
+            //window.location = "home.html"; // go to home.html
+           // alert('valid');
+            console.log("valid");
+          app.application.navigate('#homeView');
+            
+        }
+        else {
+            $('.loginbox input').val(''); // clear the form
+            $('.error').css('display', 'block'); // show error msg
         }
     });
-
-    app.loginService = {
-        viewModel: new LoginViewModel()
-    };
-})(window);
+});
