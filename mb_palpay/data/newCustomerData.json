@@ -32,14 +32,7 @@
          "currentBalance":"20.082",
          "currency":"JOD"
       },
-      {
-         "accountNumber":"0450/0375056/001/1735/001",
-         "IBAN_BBAN":"PS26 PALS 0450 0375 0560 0117 3500 1",
-         "type":"OVERDUE NORMAL LOANS USD",
-         "availableBalance":"10015.25",
-         "currentBalance":"11025.75",
-         "currency":"JOD"
-      },
+      
       {
          "accountNumber":"0450/0375056/099/3000/000",
          "IBAN_BBAN":"PS96 PALS 0450 0375 0560 9930 0000 0 ",

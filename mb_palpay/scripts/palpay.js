@@ -137,19 +137,7 @@ $(document).ready(function() {
               
                );       
            });
-               console.log("cust "+customers);
-              
-//////////////////////////////////////////////////////////////new 
-         
-         
-        //  bankAccounts.push("</ul>");
-         
-         
-         
-         /////////////////////////////////////////////////////////////////////////
-          $("#balanceInquiryTable").html(customers);
            
-        
        });
        
     
@@ -160,7 +148,8 @@ $(document).ready(function() {
     //
     //
     ///////////////////////////////////////////
-      $.getJSON("data/newCustomerData.json", function( data ) {
+
+    $.getJSON("data/newCustomerData.json", function( data ) {
            
            var bankAccounts=[];
                  
@@ -187,24 +176,15 @@ $(document).ready(function() {
                
                
            //    console.log(iban_en);
-               bankAccounts.push("<li>"+$accountInfo.accountNumber+"</li>");
-              
+               bankAccounts.push("<li><a data-icon='details' id='"+$accountInfo.accountNumber+"'+ href='#moreAccountInfo'>"+$accountInfo.accountNumber+"</a></li>");
+              //<a data-icon="play" href="#moreAccountInfo">Pay a friend</a>
                      
            });
-             //  console.log(bankAccounts);
+              // console.log(bankAccounts);
               
-//////////////////////////////////////////////////////////////new 
-         
-         
-        //  bankAccounts.push("</ul>");
-         
-         
-         
-         /////////////////////////////////////////////////////////////////////////
-         // $('#tableBody').html(customers);
-           
-       // $('#bankAccountsList').html(bankAccounts);
-       });
+        $('#balanceInquiryTable').html(bankAccounts);
+
+      });
        
     //////////////////////////////////////////
     //
@@ -266,8 +246,58 @@ if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = dd+'/'+mm+'/'+yyyy;
     
     
     
+     $(this).click(function(event) {
+         var curAccount =event.target.id;
+      //  console.log(curAccount);
+          $.getJSON("data/newCustomerData.json", function( data ) {
+           
+           var moreAccountInfo=[];
+                 
+           $.each(data.accounts,function(key,val){
+               var $accountInfo = $(this).get(0);     
+            //   console.log($accountInfo);
+            if($accountInfo.accountNumber===curAccount){
+               console.log("in loop"); 
+               moreAccountInfo.push("Available Balance" +$accountInfo.availableBalance+"");
+               
+                
+            }
+            $("#moreInfoDiv").html(moreAccountInfo);  
+                     
+           });
+              // console.log(bankAccounts);
+              
+        //$('#balanceInquiryTable').html(bankAccounts);
+
+      });
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+    });
+    
+    
+    
     
     //queryend
+    
+    
+    
+    
     
 })
 
