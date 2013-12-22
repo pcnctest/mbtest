@@ -137,7 +137,7 @@ $(document).ready(function() {
               
                );       
            });
-               console.log(customers);
+               console.log("cust "+customers);
               
 //////////////////////////////////////////////////////////////new 
          
@@ -147,7 +147,7 @@ $(document).ready(function() {
          
          
          /////////////////////////////////////////////////////////////////////////
-         // $('#tableBody').html(customers);
+          $("#balanceInquiryTable").html(customers);
            
         
        });
@@ -191,7 +191,7 @@ $(document).ready(function() {
               
                      
            });
-               console.log(bankAccounts);
+             //  console.log(bankAccounts);
               
 //////////////////////////////////////////////////////////////new 
          
@@ -203,7 +203,7 @@ $(document).ready(function() {
          /////////////////////////////////////////////////////////////////////////
          // $('#tableBody').html(customers);
            
-        $('#bankAccountsList').html(bankAccounts);
+       // $('#bankAccountsList').html(bankAccounts);
        });
        
     //////////////////////////////////////////
