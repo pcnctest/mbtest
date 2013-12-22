@@ -131,15 +131,23 @@ $(document).ready(function() {
            //    console.log(iban_en);
                customers.push("<tr><td>"+$accountInfo.accountNumber+"</td><td>"+iban_st+"<br>"+iban_en+"</td><td>"
                +type_Cap_first+"</td>"
-               +"<td><strong>"+availableBalanceFormated+" "+cur+"</strong></td><td><strong>"+currentBalanceFormated +" "+cur+"</strong></td></tr>"
+               +"<td><strong>"+availableBalanceFormated+" "+cur+"</strong></td><td><strong>"+
+               currentBalanceFormated +" "+cur+"</strong></td></tr>"
               
               
                );       
            });
-             //  console.log(data);
+               console.log(customers);
               
-
-           $('#tableBody').html(customers);
+//////////////////////////////////////////////////////////////new 
+         
+         
+        //  bankAccounts.push("</ul>");
+         
+         
+         
+         /////////////////////////////////////////////////////////////////////////
+         // $('#tableBody').html(customers);
            
         
        });
@@ -147,6 +155,62 @@ $(document).ready(function() {
     
     //////////////////////////////////////////////////////////////////////////////
     
+    
+    //
+    //
+    //
+    ///////////////////////////////////////////
+      $.getJSON("data/newCustomerData.json", function( data ) {
+           
+           var bankAccounts=[];
+                 
+           $.each(data.accounts,function(key,val){
+               var $accountInfo = $(this).get(0);     
+             //  console.log($accountInfo);
+               var iban_st=$accountInfo.IBAN_BBAN.substring(0,9);
+               var iban_en=$accountInfo.IBAN_BBAN.substring(9);
+               
+               
+               var type_toLower=($accountInfo.type).toLowerCase();
+               var len=type_toLower.length;
+               var cur=($accountInfo.type).substr(len-4);
+             //  console.log(cur);
+               var type_Cap_first=type_toLower.substr(0,1).toUpperCase()+type_toLower.substr(1,len-4)+cur;
+               var type_Cap_first=type_toLower.substr(0,1).toUpperCase()+type_toLower.substr(1,len-4)+cur;
+               
+               var curBalance=$accountInfo.currentBalance;
+               var avaBalance=$accountInfo.availableBalance;
+               
+               
+               var currentBalanceFormated = numeral(curBalance).format('0,0.00');
+               var availableBalanceFormated = numeral(avaBalance).format('0,0.00');
+               
+               
+           //    console.log(iban_en);
+               bankAccounts.push("<li>"+$accountInfo.accountNumber+"</li>");
+              
+                     
+           });
+               console.log(bankAccounts);
+              
+//////////////////////////////////////////////////////////////new 
+         
+         
+        //  bankAccounts.push("</ul>");
+         
+         
+         
+         /////////////////////////////////////////////////////////////////////////
+         // $('#tableBody').html(customers);
+           
+        $('#bankAccountsList').html(bankAccounts);
+       });
+       
+    //////////////////////////////////////////
+    //
+    //
+    //
+        
     
    
     var listItems = "";
