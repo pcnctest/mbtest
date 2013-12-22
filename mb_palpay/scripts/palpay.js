@@ -162,10 +162,11 @@ $(document).ready(function() {
                
                var type_toLower=($accountInfo.type).toLowerCase();
                var len=type_toLower.length;
+              
                var cur=($accountInfo.type).substr(len-4);
              //  console.log(cur);
                var type_Cap_first=type_toLower.substr(0,1).toUpperCase()+type_toLower.substr(1,len-4)+cur;
-               var type_Cap_first=type_toLower.substr(0,1).toUpperCase()+type_toLower.substr(1,len-4)+cur;
+            
                
                var curBalance=$accountInfo.currentBalance;
                var avaBalance=$accountInfo.availableBalance;
@@ -176,8 +177,10 @@ $(document).ready(function() {
                
                
            //    console.log(iban_en);
-               bankAccounts.push("<li><a data-icon='details' id='"+$accountInfo.accountNumber+"'+ href='#moreAccountInfo'>"+$accountInfo.accountNumber+"</a></li>");
-              //<a data-icon="play" href="#moreAccountInfo">Pay a friend</a>
+             //  bankAccounts.push("<li><a data-icon='details' id='"+$accountInfo.accountNumber+"'+ href='#moreAccountInfo'>"+$accountInfo.accountNumber+"</a></li>");
+              
+               bankAccounts.push("<li class='accountInfo'><a data-icon='details' id='"+$accountInfo.accountNumber+"'+ href='#moreAccountInfo'>"+type_Cap_first+"<br>"+$accountInfo.accountNumber+"<br>Balance :"+$accountInfo.currentBalance+"</a></li>");
+               //<a data-icon="play" href="#moreAccountInfo">Pay a friend</a>
                      
            });
               // console.log(bankAccounts);
@@ -258,7 +261,13 @@ if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = dd+'/'+mm+'/'+yyyy;
             //   console.log($accountInfo);
             if($accountInfo.accountNumber===curAccount){
                console.log("in loop"); 
-               moreAccountInfo.push("Available Balance" +$accountInfo.availableBalance+"");
+                //add content here 
+               moreAccountInfo.push("<li><strong>Account Number: </strong><br>"+$accountInfo.accountNumber+"</li>"+
+                                    "<li><strong>IBAN_BBAN :</strong>"+$accountInfo.IBAN_BBAN+"</li>"+
+                                    "<li><strong>Type: </strong>"+$accountInfo.type+"</li>"+
+                                    "<li><strong>Available Balance :</strong>"+$accountInfo.availableBalance+"</li>"+
+                                    "<li><strong>Current Balance : </strong>"+$accountInfo.currentBalance+"</li>"+
+                                    "<li><strong>Currancy :</strong>"+$accountInfo.currency+"</li>");
                
                 
             }
