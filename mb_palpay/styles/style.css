@@ -1,6 +1,7 @@
 .accountInfo{
-    background-color:red;
-    
+    background-color:gray;
+    border-radius:25px;
+    margin-bottom:5px !important;
     
     
 }
@@ -11,7 +12,7 @@
 
 /* 
 Generic Styling, for Desktops/Laptops 
-*/
+*/x
  table { 
   width: 100%; 
   border-collapse:separate; 
