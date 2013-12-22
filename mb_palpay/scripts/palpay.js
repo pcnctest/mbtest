@@ -177,13 +177,13 @@ $(document).ready(function() {
                
                
            //    console.log(iban_en);
-             //  bankAccounts.push("<li><a data-icon='details' id='"+$accountInfo.accountNumber+"'+ href='#moreAccountInfo'>"+$accountInfo.accountNumber+"</a></li>");
+             //  bankAccounts.push("<li><a data-icon='details' id='"+$accountInfo.accountNumber+"'+ href='#moreAccountInfo'><strong>"+$accountInfo.accountNumber+"</strong></a></li>");
               
-               bankAccounts.push("<li class='accountInfo'><a data-icon='details' id='"+$accountInfo.accountNumber+"'+ href='#moreAccountInfo'>"+type_Cap_first+"<br>"+$accountInfo.accountNumber+"<br>Balance :"+$accountInfo.currentBalance+"</a></li>");
+               bankAccounts.push("<li class='accountInfo'><a data-icon='details' id='"+$accountInfo.accountNumber+"'+ href='#moreAccountInfo'>"+"<strong>"+type_Cap_first+"</strong>"+"<br>"+$accountInfo.accountNumber+"<br><strong>Balance :</strong>"+$accountInfo.currentBalance+"</a></li>");
                //<a data-icon="play" href="#moreAccountInfo">Pay a friend</a>
                      
            });
-              // console.log(bankAccounts);
+               console.log(bankAccounts);
               
         $('#balanceInquiryTable').html(bankAccounts);
 
