@@ -12,7 +12,7 @@ $(document).ready(function() {
             //window.location = "home.html"; // go to home.html
            // alert('valid');
             console.log("valid");
-          app.application.navigate('#homeView');
+          app.application.navigate('views/homeView.html');
             
         }
         else {
