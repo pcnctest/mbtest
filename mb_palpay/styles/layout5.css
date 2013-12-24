@@ -1,0 +1,25 @@
+.km-android .km-view .km-content {
+    background-color: rgb(229, 229, 229);
+}
+.km-android .km-view .km-content .km-listgroupinset .km-group-title .km-text {
+    color: rgb(76, 76, 76);
+}
+.km-android .km-view .km-content .km-list > li .km-icon {
+    color: rgb(76, 76, 76);
+}
+.km-android .km-view .km-content .km-list .km-state-active .km-listview-link {
+    color: rgb(76, 76, 76);
+}
+.km-android .km-view .km-content .km-list > li {
+    color: rgb(76, 76, 76);
+    border-top-color: rgb(76, 76, 76);
+    border-right-color: rgb(76, 76, 76);
+    border-bottom-color: rgb(76, 76, 76);
+    border-left-color: rgb(76, 76, 76);
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0, rgba(255,255,255,.2)),color-stop(1, rgba(255,255,255,.8)));
+    background-image: -moz-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.8));
+    background-image: -ms-linear-gradient(50% 0,50% 100%,rgba(255,255,255,.2),rgba(255,255,255,.8));
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-color: rgba(0, 0, 0, 0);
+}

@@ -1,3 +1,12 @@
+li{
+    border-width:10px !important;
+    border-color:black;
+    margin-bottom:10px;
+}
+
+
+h1,h2,h3,h4,h5,h6{color:#42454a}
+
 .accountInfo{
     background-color:gray;
     border-radius:25px;
@@ -8,6 +17,21 @@
     
 }
 
+#yourInformation {
+    
+    color:#42454a
+}
+
+#enterCorrect{
+   color:#42454a 
+}
+
+ #username {
+   color:#42454a 
+} 
+#password{
+    color:#42454a 
+}
 
 
 
@@ -19,7 +43,8 @@ Generic Styling, for Desktops/Laptops
  table { 
   width: 100%; 
   border-collapse:separate; 
-     table-layout: fixed;
+  table-layout: fixed;
+    
 }
 /* Zebra striping */
  tr:nth-of-type(odd) { 
@@ -34,6 +59,7 @@ Generic Styling, for Desktops/Laptops
   padding: 6px; 
   border: 1px solid #ccc; 
   text-align: left; 
+     color:#42454a;
 }
 
 td{

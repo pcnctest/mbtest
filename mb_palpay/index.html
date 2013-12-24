@@ -6,7 +6,7 @@
      <script src="scripts/numeral.min.js"></script>
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
     <link href="styles/main.css" rel="stylesheet" />
-    <link href="styles/layout2.css" rel="stylesheet" />
+    <link href="styles/layout4.css" rel="stylesheet" />
  <link href="styles/style.css" rel="stylesheet" />
     
     <script src="cordova.js"></script>
@@ -27,7 +27,7 @@
     
     
     
-    <!--Main Layout Start-->
+    <!--Main Layout Start      -->
     <div data-id="main-layout" data-role="layout">
     <div data-role="header">
         <div data-role="navbar">
@@ -43,20 +43,20 @@
         <div data-role="footer">
             <div data-role="tabstrip">
                 <a data-icon="home" href="views/homeView.html">Home</a>
-                <a data-icon="bookmarks" href="views/accounts">Accounts</a>
-                <a data-icon="fastforward" href="#transfers">Transfers</a>
+                <a data-icon="bookmarks" href="views/accountsView.html">Accounts</a>
+                <a data-icon="fastforward" href="views/transfersView.html">Transfers</a>
                 <a data-icon="info" href="#cs">More Info</a>
             </div>
         </div>
     </div>
-    <!--Log Main Layout Start-->
+    <!--Log Main Layout Start  -->
     
-    <!--Log In View Start-->
+    <!--Log In View Start      -->
     <div data-role="view" id="logInView">
       
         <div id="logoContainer"></div>
         
-        <h3 id="yourInformation">
+        <h3 id="yourInformation" >
             <br>
                  Please Enter your log in information:
             <br>
@@ -64,13 +64,13 @@
              <!-- <a id="skin-change" data-role="button" data-click="app.changeSkin">Switch Skin</a>-->
         </h3>
         
-         <p style="display: none;" class="error">Error. Please enter correct email &amp; password.</p>
+         <p id="enterCorrect" class="error">Error. Please enter correct email &amp; password.</p>
         
-        <form data-bind="events: { keyup: checkEnter }">
+        <form  data-bind="events: { keyup: checkEnter }">
             
                 <ul data-role="listview" data-style="inset">
                     <li>
-                        <label>
+                        <label class="input1" >
                             Username
                                 <input type="text" id="username"/>
                         </label>
@@ -78,7 +78,7 @@
                     <li>
                         <label>
                             Password
-                                <input type="password" id="password"/>
+                                <input class="input1" type="password" id="password"/>
                         </label>
                     </li>
                 </ul>
@@ -88,193 +88,8 @@
                 </div>
             </form>
         
-        
-        
-        
-        <!-- old log in form 
-        <form id="logInForm" >
-            <br>
-            <ul>
-                <li><label>
-                    Username <input type="text" data-bind="value: username" /></label></li> 
-                
-                <li><label>
-                    Password&nbsp <input type="password" data-bind="value: password" /></label></li>
-            </ul> 
-      
-            <div class="buttonArea">
-                   <!-- <input type="submit" id="login" data-role="button"  class="login-button" value="Login" /> 
-                <input type="submit" id="login" data-role="button" data-bind="click: onLogin, invisible: isLoggedIn" class="login-button" value="Login" />
-                </div>
-        </form>  -->
-           
-        
-        
-        
-        
     </div>
-    <!--Log In View End-->
-    
-    
-    
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!-- Bank Accounts Views End -->
-    
-    <!-- Transfers View Start -->
-     <div data-role="view" id="transfers"  data-layout="main-layout">
-            <ul data-role="listview" data-style="inset">
-                <li>
-                    <h3>Transfers</h3>
-                </li>
-                <li>
-                    <a data-icon="action" href="#transfers">Transfers between accounts</a>
-                </li>
-                <li>
-                    <a data-icon="action" href="#transfers">Transfer to another BOP account</a>
-                </li>
-                <li>
-                    <a data-icon="action" href="#transfers">Schedule a transfer</a>
-                </li>
-                <li>
-                    <a data-icon="action" href="#transfers">Review scheduled transfers</a>
-                </li>
-            </ul>
-        </div>    
-    <!-- Transfers View End -->
-    
-    <!-- Cheque Services Start -->
-     <div data-role="view" id="chequeServices"  data-layout="main-layout">
-            <ul data-role="listview" data-style="inset">
-                <li>
-                    <h3>Cheque Services</h3>
-                </li>
-                <li>
-                    <a data-icon="action" href="#cs">Chequebook request</a>
-                </li>
-                <li>
-                    <a data-icon="pause" href="#cs">Stop cheque</a>
-                </li>
-                <li>
-                    <a data-icon="search" href="#cs">Cheque status inquiry</a>
-                </li>
-                <li>
-                    <a data-icon="share" href="#cs">Seven year archive</a>
-                </li>
-            </ul>
-        </div>    
-    <!-- Cheque Services End -->
-    
-    
-    <!-- Bill Payments Start -->
-     <div data-role="view" id="billPayments"  data-layout="main-layout">
-            <ul data-role="listview" data-style="inset">
-                <li>
-                    <h3>Bill Payments</h3>
-                </li>
-                <li>
-                    <a data-icon="action" href="#cs">Make a single payment</a>
-                </li>
-                <li>
-                    <a data-icon="organize" href="#cs">List of unpaid bills</a>
-                </li>
-                <li>
-                    <a data-icon="mostviewed" href="#cs">List of previously paid bills</a>
-                </li>
-                <li>
-                    <a data-icon="add" href="#cs">E-TOP-UP</a>
-                </li>
-            </ul>
-        </div>    
-    <!-- Bill Payments End -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!-- old views -->
-    
-    <!--Money Transfers View Start-->
-    <div data-role="view" id="moneyTransfers"  data-layout="main-layout">
-        <ul data-role="listview" data-style="inset">
-                <li>
-
-                </li>
-                <li>Money Transfers</li>
-                <li> </li>
-                <li>
-                    <a data-icon="fastforward" href="#payFriend">Pay a friend</a>
-                </li>
-                <li>
-                    <a data-icon="downloads" href="#cashIn">Cash In</a>
-                </li>
-                
-                <li>
-                    <a data-icon="action" href="#cashOut">Cash Out</a>
-                </li>
-        </ul>
-    </div>
-    <!--Money Transfers View End-->
-    
-    
-    <!--Pay a friend View Start-->
-        <div data-role="view" id="payFriend"  data-layout="main-layout">
-            <ul data-role="listview" data-style="inset">
-                <li>
-
-                </li>
-                <li>Pay a friend</li>
-
-                <li> 
-                    <label>Select Friend
-                         <select id="friend">
-                            <option>Marsha Cespedes</option>
-                            <option>Sunday Hippler</option>
-                            <option>Beverly Soderlund</option>
-                            <option>Roscoe Gardin </option>
-                            <option>Chun Heber </option>
-                            <option>Jestine Masone </option>
-                            <option>Woodrow Mandez</option>
-                            <option>Rina Messenger </option>
-                            <option>Wilda Shadle </option>
-                            <option>Liana Dolph </option>
-                            <option>Odis Bueche </option>
-                            <option>Adrianne Lupercio</option>
-                            <option>Magdalena Ohern </option>
-                            <option>Erinn Mcgruder </option>
-                            <option>Doreen Bopp </option>
-                            <option>Leonard Gordon </option>
-                            <option>Ariana Arora </option>
-                            <option>Patrice Courchesne </option>
-                            <option>Rana Hedberg </option>
-                            <option>Lauryn Prine </option>
-                        </select>
-                    </label>
-                </li>
-
-                <li>
-                    <a data-icon="action" href="#cashOut">Cash Out</a>
-                </li>
-            </ul>
-        </div>
-    <!--Pay a friend View End-->
-    
+    <!--Log In View End        -->
      
     <!--Balance Inquiry View Start-->
         <div data-role="view" id="balanceInquiry"  data-layout="main-layout">
