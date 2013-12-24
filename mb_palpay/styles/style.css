@@ -48,10 +48,14 @@ Generic Styling, for Desktops/Laptops
 }
 /* Zebra striping */
  tr:nth-of-type(odd) { 
-  background: #2e5c69; 
+  /*background: #2e5c69; */
+  /*   background: #00b3db;*/
+     background: #00aeef;
 }
  th { 
-  background: #333; 
+  /*background: #333; */
+  background: #ccc; 
+     
   color: white; 
   font-weight: bold; 
 }
