@@ -40,9 +40,14 @@ h1,h2,h3,h4,h5,h6{color:#42454a}
 }
 
 
-
-
-
+#grid tr{
+    
+    border-bottom-color:gray !important;   
+    border-left-color:gray !important;   
+    border-right-color:gray !important;   
+       
+    
+}
 /* 
 Generic Styling, for Desktops/Laptops 
 */x
