@@ -4,7 +4,7 @@ em{
     font-size:14px;
 }
 
-li{
+km-android li{
     border-width:10px !important;
     border-color:black;
     margin-bottom:10px;
@@ -33,11 +33,14 @@ h1,h2,h3,h4,h5,h6{color:#42454a}
 }
 
  #username {
-   color:#42454a 
+   
+   color:#42454a;
 } 
 #password{
-    color:#42454a 
+    color:#42454a; 
 }
+
+
 
 
 #grid tr{
@@ -69,7 +72,12 @@ tr{
      /*background:#666;*/
 }
 
- th { 
+th  { 
+  /*background: #333; */
+  background: none; 
+     }
+
+ .km-android th { 
   /*background: #333; */
   background: #ccc; 
      
@@ -98,11 +106,19 @@ only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 
 	/* Force table to not be like tables anymore */
-	#balanceInquiry table{
+	km-android #balanceInquiry table{
        border:2px solid;
         width:99%;
         
     }
+    
+   .km-ios7 #balanceInquiry table{
+       border:2px solid;
+        width:100%;
+        border-color:gray;
+        
+    }
+    
     #balanceInquiry  table, #balanceInquiry thead, #balanceInquiry tbody, #balanceInquiry th,#balanceInquiry  td,#balanceInquiry tr { 
 		display: block; 
 	}
