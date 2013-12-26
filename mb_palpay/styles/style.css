@@ -1,3 +1,9 @@
+
+em{
+   font-weight:bolder !important; 
+    font-size:14px;
+}
+
 li{
     border-width:10px !important;
     border-color:black;
@@ -51,7 +57,13 @@ Generic Styling, for Desktops/Laptops
   /*background: #2e5c69; */
   /*   background: #00b3db;*/
      background: white;
+    
 }
+
+tr{
+     /*background:#666;*/
+}
+
  th { 
   /*background: #333; */
   background: #ccc; 
@@ -126,8 +138,8 @@ only screen and (max-width: 760px),
     #balanceInquiry td:nth-of-type(1):before { content: "Account Number"; }
 	#balanceInquiry td:nth-of-type(2):before { content: "IBAN/BBAN "; }
     #balanceInquiry td:nth-of-type(3):before { content: "Type"; }
-	#balanceInquiry td:nth-of-type(4):before { content: "Available Balance"; }
-	#balanceInquiry td:nth-of-type(5):before { content: "Current Balance"; }
+	#balanceInquiry td:nth-of-type(4):before { content: "Current Balance"; }
+	#balanceInquiry td:nth-of-type(5):before { content: "Available Balance"; }
     
   /*  td:nth-of-type(1):before { content: "Transaction Date"; }
     td:nth-of-type(2):before { content: "Explanation"; }

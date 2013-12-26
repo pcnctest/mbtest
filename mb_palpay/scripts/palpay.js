@@ -1,6 +1,20 @@
 $(document).ready(function() {
     console.log("ready!");
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     var accountBalance = {
         "Balnces":[
             {"0450/0375056/001/3000/000":"Iyad & Galina US$ account"},
@@ -74,8 +88,8 @@ $(document).ready(function() {
                
             customers.push("<tr><td>" + $accountInfo.accountNumber + "</td><td>" + iban_st + "<br>" + iban_en + "</td><td>"
                            + type_Cap_first + "</td>"
-                           + "<td><strong>" + availableBalanceFormated + " " + cur + "</strong></td><td><strong>" +
-                           currentBalanceFormated + " " + cur + "</strong></td></tr>"
+                           + "<td><em>" + currentBalanceFormated + " " + cur + "</em></td><td><em>" +
+                           availableBalanceFormated + " " + cur + "</em></td></tr>"
             );  
         });
         $('#grid').html(customers);
