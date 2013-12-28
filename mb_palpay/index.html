@@ -17,10 +17,9 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 
    
-    <script src="scripts/login.js"></script>
-    <script src="scripts/location.js"></script>
-    <script src="scripts/weather.js"></script>
+    
     <script src="scripts/app.js"></script>
+    <script src="scripts/login.js"></script>
     <script src="scripts/palpay.js"></script>
     
 
@@ -205,19 +204,16 @@
     
     <!-- test view  start-->
     
-    <div data-role="view" id="testView"  data-layout="main-layout">
-            
-         <h3>Test View</h3>
-         <div >
-             <ul data-role="listview" data-style="inset" id="moreInfoDiv">
-               
-               
-                
-                
-            </ul>
-             
-         </div>
-    </div>
+      <div id="testView" data-role="view" data-model="viewModel"> 
+    <input data-bind="value:na" />
+    <button data-bind="click: displayGreeting">Display Greeting</button>
+    
+        
+        <button data-bind="click:change ">Change</button>
+        
+        
+</div>
+    
     
     <!-- test view  start-->
     

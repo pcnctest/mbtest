@@ -2,14 +2,19 @@
     var mobileSkin = "",
         app = global.app = global.app || {};
 
-    document.addEventListener('deviceready', function () {
+    /*document.addEventListener('deviceready', function () {
         navigator.splashscreen.hide();
         $(document.body).height(window.innerHeight);
     }, false);
+    */
+    
+    
+    
+    
 
-    app.application = new kendo.mobile.Application(document.body, { layout: "tabstrip-layout"});
+    app.application = new kendo.mobile.Application(document.body, { transition: "slide" });
 
-    app.changeSkin = function (e) {
+    /*app.changeSkin = function (e) {
         if (e.sender.element.text() === "Flat") {
             e.sender.element.text("Native");
             mobileSkin = "flat";
@@ -20,5 +25,5 @@
         }
 
         app.application.skin(mobileSkin);
-    };
+    };*/
 })(window);
