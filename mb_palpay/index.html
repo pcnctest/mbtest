@@ -48,6 +48,27 @@
                 <a data-icon="info" href="#cs">More Info</a>
             </div>
         </div>
+    </div><!--Main LayoutForStart Start      -->
+    <div data-id="main-layout2" data-role="layout">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title" id="viewTitle" >&nbsp;</span>
+            <a data-role="backbutton" data-align="left">Log out</a>
+        </div>
+    </div>    
+        <div data-role="footer">
+            <div data-role="tabstrip">
+                
+            </div>
+        </div>
+        <div data-role="footer">
+            <div data-role="tabstrip">
+                <a data-icon="home" href="views/homeView.html">Home</a>
+                <a data-icon="bookmarks" href="views/accountsView.html">Accounts</a>
+                <a data-icon="fastforward" href="views/transfersView.html">Transfers</a>
+                <a data-icon="info" href="#cs">More Info</a>
+            </div>
+        </div>
     </div>
     
     
@@ -96,7 +117,10 @@
         <div data-role="view" id="balanceInquiry"  data-layout="main-layout">
             <h3>Balance Inquiry</h3>
 
-            <table id="grid">
+            
+           
+            
+            <table id="grid2">
 
                 <thead >
                     <tr >
@@ -109,7 +133,7 @@
                     </tr>
                 </thead>
 
-                <tbody >
+                <tbody id="grid">
                     <ul data-role="listview" data-style="inset" id="balanceInquiryTable">
 
                     </ul>

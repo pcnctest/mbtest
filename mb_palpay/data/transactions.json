@@ -33,7 +33,7 @@
     {
       "date": "17/12/13",
       "explanation": "ELCTRONIC TRANSACTION",
-      "ammount": "-0"
+      "ammount": "-50"
     },
     {
       "date": "19/12/13",
@@ -58,7 +58,7 @@
     {
       "date": "23/12/13",
       "explanation": "CASH WITHDRAWAL FROM ATM.",
-      "ammount": "-0"
+      "ammount": "-100"
     },
     {
       "date": "23/12/13",
@@ -73,7 +73,7 @@
     {
       "date": "27/12/13",
       "explanation": "ELCTRONIC TRANSACTION",
-      "ammount": "-1"
+      "ammount": "-125"
     },
     {
       "date": "10/12/13",

@@ -108,13 +108,13 @@ only screen and (max-width: 760px),
 	/* Force table to not be like tables anymore */
 	km-android #balanceInquiry table{
        border:2px solid;
-        width:99%;
+        width:98%;
         
     }
     
    .km-ios7 #balanceInquiry table{
        border:2px solid;
-        width:100%;
+        width:99%;
         border-color:gray;
         
     }
