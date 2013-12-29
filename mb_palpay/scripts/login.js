@@ -9,8 +9,8 @@ $(document).ready(function() {
         event.preventDefault(); // prevent PageReLoad
         $('.error').css('display', 'none'); // hide error msg
 
-        var ValEmail = $('#username').val() === ''; // Email Value
-        var ValPassword = $('#password').val() === ''; // Password Value
+        var ValEmail = $('#username').val() === 'bop'; // Email Value
+        var ValPassword = $('#password').val() === '123456'; // Password Value
         if (ValEmail === true && ValPassword === true) { // if ValEmail & ValPass are as above
             //window.location = "home.html"; // go to home.html
            // alert('valid');

@@ -1,9 +1,93 @@
 
 
-
-
 $(document).ready(function() {
-    console.log("ready!");
+   console.log("ready!");
+    
+    
+    
+    
+    
+   
+    
+    
+    
+    
+    var accountsD=[];
+       console.log("ready!");
+    var url="data/newCustomerData.json" ;
+    
+    
+    $.getJSON(url, function(data) {
+        
+         $.each(data.accounts, function(key, val) {
+        accountsD.push(data.accounts);
+        });
+        
+        
+    });    
+    
+    console.log("accountsD");
+    console.log(accountsD);
+    
+    
+    var viewModel = kendo.observable({name:"fadii",
+     accounts:[{"num":1},{"num":2},{"num":3}],
+     //accounts:accountsD,
+        products: [
+              {"ProductID":1,"ProductName":"Chai","UnitPrice":18},
+              {"ProductID":2,"ProductName":"Chang","UnitPrice":19},
+              {"ProductID":3,"ProductName":"Aniseed Syrup","UnitPrice":10},
+              {"ProductID":4,"ProductName":"Chef Anton\u0027s Cajun Seasoning","UnitPrice":22},
+              {"ProductID":5,"ProductName":"Chef Anton\u0027s Gumbo Mix","UnitPrice":21.35},
+              {"ProductID":6,"ProductName":"Grandma\u0027s Boysenberry Spread","UnitPrice":25}
+            ],
+            productsBound: function() {
+              console.log($("[data-role=listview]").find("h3").text());
+            }
+          });
+      kendo.bind($("#testView"), viewModel);
+
+
+
+
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     //////// test MVVM ////////////

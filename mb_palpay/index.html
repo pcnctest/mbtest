@@ -21,8 +21,6 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/login.js"></script>
     <script src="scripts/palpay.js"></script>
-    <script src="scripts/viewModel.js"></script>
-    
 
 </head>
 <body>
@@ -205,16 +203,93 @@
     
     <!-- test view  start-->
     
-      <div id="testView" data-role="view" data-model="viewModel"> 
-    <input data-bind="value:na" />
-    <button data-bind="click: displayGreeting">Display Greeting</button>
-    
+        <div id="testView" data-role="view" >
+           <h1>More info</h1>
+           
+            <input data-bind="value:name">
+            
+            
+          
+            
+            <div data-role="listview"
+             data-template="myTemplate"
+                data-bind="source: accounts">
+                
+            </div>
+            
+            
+            <script type="text/x-kendo-tmpl" id="myTemplate">
+
+                <h1 data-bind="text:num"></h1>
+                   
+            </script>
+            
+            
+            <div id="myGrid"></div>
+            
+            
+            <script>
+                $(function() {
+                    var dataSource = new kendo.data.DataSource({
+                        transport: {
+                            read: {
+                                url: "data/newCustomerData.json",
+                                dataType:"json",
+                                type: "POST",
+                            }
+                        },
+                        schema   : {
+        data: "people"
+    }
+                    });
+console.log("dataSource");
+console.log(dataSource);
+                });
+            </script>
+            
+            
+                        
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+           <!-- <div data-role="listview"
+       data-template="template"
+       data-bind="source: products">
+                
+            </div>
+            
+            
+            <script type="text/x-kendo-tmpl" id="template">
+      <div class="product">
+        <img src="http://demos.kendoui.com/content/web/foods/${ProductID}.jpg" alt="${ProductName} image" />
+          <h3>${ProductName}</h3>
+            <dl>
+              <dt>Price:</dt>
+                <dd>${kendo.toString(UnitPrice, "c")}</dd>
+            </dl>
+        </div>
+    </script>-->
+            
+            
+            
+
+        </div>
         
-        <button data-bind="click:change ">Change</button>
-        
-        
-</div>
-    
     
     <!-- test view  start-->
     
