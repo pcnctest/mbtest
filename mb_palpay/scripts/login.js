@@ -3,7 +3,11 @@ $(document).ready(function() {
      $('.error').css('color', 'black');
     $('#username').focus();
     
-
+ /*$('#logout').click(function(){
+     
+     $("#username").val('');
+     
+ });*/
     $('#submit').click(function() {
 
         event.preventDefault(); // prevent PageReLoad
@@ -16,6 +20,8 @@ $(document).ready(function() {
            // alert('valid');
             console.log("valid");
           app.application.navigate('views/homeView.html');
+             $("#username").val('');
+             $("#password").val('');
             
         }
         else {
